@@ -1,3 +1,25 @@
+import '@/styles/globals.css'
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata = {
+  title: 'Magical Tools Hub',
+  description: 'A collection of magical tools and utilities for wizards and witches',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
+
 'use client'
 
 import { useState, useMemo, useCallback } from 'react'
